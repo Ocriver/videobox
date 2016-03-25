@@ -3,4 +3,4 @@ VideoBox App
 
 ##Descripción
 
-Aplicación de buzón de correo.
+Aplicación de buzón de videos.
