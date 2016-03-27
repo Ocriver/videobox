@@ -26,7 +26,7 @@ Video box se trata de una aplicación web simple en la que se pueden enviar vide
 
 ##Demo
 
-* **Develoment** <>
+* **Develoment** <http://videobox.azurewebsites.net/index.php>
 * **Release** <>
 
 ##Tecnologías utilizadas
