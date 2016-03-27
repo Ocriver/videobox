@@ -13,9 +13,9 @@ class Videos extends CI_Controller {
     public function index()
     {
         $data['videos'] = $this->Video_model->get_videos();
-        $data['title'] = 'Archivo de Videos';
+        $data['title'] = 'Videos recientes';
 
-        $this->load->view('templates/header', $data);
+        $this->parser->parse('templates/header', $data);
         $this->parser->parse('videos/video_archives_template', $data);
         //$this->load->view('videos/index', $data);
         $this->load->view('templates/footer');
@@ -23,17 +23,17 @@ class Videos extends CI_Controller {
 
     public function view($videoid = NULL)
     {
-        $data['videos_item'] = $this->news_model->get_videos($videoid);
-
-        if (empty($data['videos_item']))
+        //$data['videos_item'] = $this->Video_model->get_videos($videoid);
+        $data = $this->Video_model->get_videos($videoid);
+        if (empty($data))
         {
             show_404();
         }
 
-        $data['title'] = $data['videos_item']['title'];
+        //$data['title'] = $data['videos_item']['title'];
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('news/view', $data);
+        $this->parser->parse('templates/header', $data);
+        $this->parser->parse('videos/view', $data);
         $this->load->view('templates/footer');
     }
 
@@ -51,7 +51,7 @@ class Videos extends CI_Controller {
 
         if ($this->form_validation->run() === FALSE)
         {
-            $this->load->view('templates/header', $data);
+            $this->parser->parse('templates/header', $data);
             $this->load->view('videos/upload');
             $this->load->view('templates/footer');
 
