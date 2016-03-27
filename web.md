@@ -13,11 +13,11 @@ Video box se trata de una aplicación web simple en la que se pueden enviar vide
 
 ##Instalación
 
-* Instala la aplicación con git:
+* Instala la aplicación con git:  
     `
     git clone https://github.com/Aibehn/videobox.git
     `
-* Descarga el .zip:
+* Descarga el .zip:  
  <https://github.com/Aibehn/videobox/archive/master.zip>
 
 ###Configuración
@@ -26,13 +26,13 @@ Video box se trata de una aplicación web simple en la que se pueden enviar vide
 
 ##Demo
 
-* **Develoment** <http://videobox.azurewebsites.net>
+* **Develoment** <>
 * **Release** <>
 
 ##Tecnologías utilizadas
 * **[CodeIgniter](https://codeigniter.com)** v3.0.6 - Framework PHP
 * **[Bootstrap](http://getbootstrap.com)** v3.3.6 - HTML, CSS, and JS framework
-* **[FontAwesome](http://fontawesome.io)** v4.5.0 - Font and CSS toolkit
+* **[FontAwesome](http://fontawesome.io)** v4.5.0 - Font and CSS toolkit 
 * **[Wowza](https://www.wowza.com)** v4.4.1 - Streaming
 * **[JwPlayer](http://www.jwplayer.com/)** v7.0 - Reproductor JS
 * **[bitDash](http://www.dash-player.com/)** v4.3.1 - Reproductor MPEG-DASH
