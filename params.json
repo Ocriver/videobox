@@ -1,0 +1,6 @@
+{
+  "name": "Videobox",
+  "tagline": "VideoBox App",
+  "body": "#Video Box\r\n---\r\n##Objetivo\r\nVideo box se trata de una aplicación web simple en la que se pueden enviar videos, estos serán convertidos y servidos con el servidor de streaming Wowza mediante RTSP y/o MPEG-DASH.\r\n\r\n##Requerimientos del servidor\r\n\r\n* Servidor web apache\r\n* PHP > v5.4\r\n* Servidor de Streaming Wowza\r\n* Base de datos MySql\r\n* FFmpeg\r\n\r\n##Instalación\r\n\r\n``git clone https://github.com/Aibehn/videobox.git",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
