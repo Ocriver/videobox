@@ -73,7 +73,24 @@ git clone https://github.com/Aibehn/videobox.git
 <li>
 <strong>config/config.php</strong> cambiar 'base_url' a la url del servidor</li>
 <li>
-<strong>config/database.php</strong> añadir información de la base de datos</li>
+<strong>config/database.php</strong> añadir información de la base de datos
+
+<ul>
+<li>
+<strong>DDL base de datos</strong> :</li>
+</ul>
+
+<pre><code>CREATE TABLE videos
+(
+id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+title VARCHAR(128) NOT NULL,
+videoid VARCHAR(128) NOT NULL,
+text TEXT NOT NULL,
+name VARCHAR(128) NOT NULL
+);
+CREATE INDEX videoid ON videos (videoid);
+</code></pre>
+</li>
 </ul>
 
 <h2>
@@ -81,7 +98,8 @@ git clone https://github.com/Aibehn/videobox.git
 
 <ul>
 <li>
-<strong>Develoment</strong> &lt;&gt;</li>
+<strong>Develoment</strong> <a href="http://videobox.azurewebsites.net/index.php">http://videobox.azurewebsites.net/index.php</a>
+</li>
 <li>
 <strong>Release</strong> &lt;&gt;</li>
 </ul>
