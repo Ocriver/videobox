@@ -23,6 +23,18 @@ Video box se trata de una aplicación web simple en la que se pueden enviar vide
 ###Configuración
 * **config/config.php** cambiar 'base_url' a la url del servidor
 * **config/database.php** añadir información de la base de datos
+    * **DDL base de datos** :
+    ```
+CREATE TABLE videos
+(
+    id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    title VARCHAR(128) NOT NULL,
+    videoid VARCHAR(128) NOT NULL,
+    text TEXT NOT NULL,
+    name VARCHAR(128) NOT NULL
+);
+CREATE INDEX videoid ON videos (videoid);
+    ```
 
 ##Demo
 
