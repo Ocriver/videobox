@@ -2,7 +2,7 @@
 {videos}
 <div class="media">
     <div class="media-left">
-        <a href="<?php echo base_url('videos/view/{videoid}') ?>">
+        <a href="<?php echo site_url('videos/view/{videoid}') ?>">
             <img class="media-object" src="<?php echo asset_url('img/video_poster')?>/{videoid}.jpg" alt="{title}">
         </a>
     </div>
