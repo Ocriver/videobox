@@ -1,14 +1,20 @@
-RewriteEngine on
-RewriteBase /
-# Hide the application and system directories by redirecting the request to index.php
-RewriteRule ^(application|system|\.svn) index.php/$1 [L]
+#RewriteEngine on
+#RewriteBase /
+## Hide the application and system directories by redirecting the request to index.php
+#RewriteRule ^(application|system|\.svn) index.php/$1 [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+#
+#<Files "index.php">
+#AcceptPathInfo On
+#</Files>
+
+
+RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [QSA,L]
-
-<Files "index.php">
-AcceptPathInfo On
-</Files>
+RewriteRule ^(.*)$ index.php/$1 [L]
 
 SetEnv CI_ENV production
 #SetEnv CI_ENV testing

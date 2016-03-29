@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost:3306',
-	'username' => 'videbox_user',
-	'password' => 'videbox_pass',
+	'hostname' => '127.0.0.1:8889',
+	'username' => 'videobox_user',
+	'password' => 'videobox_pass',
 	'database' => 'videobox',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
