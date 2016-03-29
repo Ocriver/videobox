@@ -38,7 +38,8 @@ class Video_model extends CI_Model {
             'title' => $this->input->post('title'),
             'videoid' => $videoid,
             'text' => $this->input->post('text'),
-            'name' => $this->input->post('name')
+            'name' => $this->input->post('name'),
+            'mpeg-dash' =>$this->input->post('mpeg-dash')
         );
 
         return $this->db->insert('videos', $data);

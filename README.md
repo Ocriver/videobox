@@ -31,7 +31,8 @@ CREATE TABLE videos
     title VARCHAR(128) NOT NULL,
     videoid VARCHAR(128) NOT NULL,
     text TEXT NOT NULL,
-    name VARCHAR(128) NOT NULL
+    name VARCHAR(128) NOT NULL,
+    `mpeg-dash` TINYINT(1) DEFAULT '0' NOT NULL
 );
 CREATE INDEX videoid ON videos (videoid);
     ```

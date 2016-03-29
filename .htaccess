@@ -10,5 +10,5 @@ RewriteRule ^(.*)$ index.php/$1 [QSA,L]
 AcceptPathInfo On
 </Files>
 
-#SetEnv CI_ENV production
-SetEnv CI_ENV testing
+SetEnv CI_ENV production
+#SetEnv CI_ENV testing

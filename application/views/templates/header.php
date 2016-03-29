@@ -25,6 +25,7 @@
 
 
     <script src="http://content.jwplatform.com/libraries/Aj2eIjhg.js"></script>
+    <script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitdash/latest/bitdash.min.js"></script>
     <script src="<?php echo asset_url('js/vendor/jquery.min.js') ?>"></script>
     <script src="<?php echo asset_url('js/vendor/lodash.min.js') ?>"></script>
     <script src="<?php echo asset_url('js/vendor/bootstrap.min.js') ?>"></script>

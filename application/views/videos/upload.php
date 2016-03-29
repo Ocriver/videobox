@@ -13,6 +13,9 @@
 <label for="name">Nombre Archivo</label>
 <textarea name="name"></textarea><br />
 
+<label for="mpeg-dash">¿Utilizar Mpeg-Dash?</label>
+<input type="checkbox" name="mpeg-dash" value="1" />
+
 <input type="submit" name="submit" value="Upload Video" />
 
 </form>

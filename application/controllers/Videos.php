@@ -30,16 +30,27 @@ class Videos extends CI_Controller {
             show_404();
         }
 
-        //$data['title'] = $data['videos_item']['title'];
 
+        //Load View
         $this->parser->parse('templates/header', $data);
-        $this->parser->parse('videos/view', $data);
+
+        if ($data['mpeg-dash'])
+        {
+            $this->parser->parse('videos/view-dash', $data);
+        }
+        else
+        {
+            $this->parser->parse('videos/view', $data);
+        }
+
         $this->load->view('templates/footer');
     }
 
 
     public function upload()
     {
+        //TODO: Completar el formulario de subida
+        
         $this->load->helper('form');
         $this->load->library('form_validation');
 
