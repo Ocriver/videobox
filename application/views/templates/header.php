@@ -3,6 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -30,7 +31,7 @@
     <script src="<?php echo asset_url('js/vendor/lodash.min.js') ?>"></script>
     <script src="<?php echo asset_url('js/vendor/bootstrap.min.js') ?>"></script>
     <script src="<?php echo asset_url('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') ?>"></script>
-    
+
 </head>
     <body>
     <!--[if lt IE 8]>
@@ -57,15 +58,7 @@
                     <?php echo nav_item('About','about')?>
                 </ul>
 
-                <form class="navbar-form navbar-right" role="form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-success">Sign in</button>
-                </form>
+                <!-- TODO: NavBAR Login<?php //echo user_login_nav('{user_id}') ?>`-->
             </div><!--/.navbar-collapse -->
         </div>
     </nav>

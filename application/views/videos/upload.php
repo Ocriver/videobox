@@ -1,6 +1,6 @@
 <h2><?php echo $title; ?></h2>
 
-<?php echo validation_errors(); ?>
+<?php echo validation_errors('<div class="alert alert-danger" role="alert">','</div>'); ?>
 
 <?php echo form_open('videos/upload'); ?>
 

@@ -45,3 +45,28 @@ if ( !function_exists('nav_item'))
 
     }
 }
+    
+
+if ( !function_exists('user_login_nav'))
+{
+    function user_login_nav($user_id='')
+    {
+        //TODO: Navbar login
+        if(!$user_id ==='')
+        {
+            return $user_id->username;
+        }
+        else {
+            return "<form class=\"navbar-form navbar-right\" role=\"form\" action='user/login'>
+                        <div class=\"form-group\">
+                            <input type=\"text\" placeholder=\"Email\" class=\"form-control\">
+                        </div>
+                        <div class=\"form-group\">
+                            <input type=\"password\" placeholder=\"Password\" class=\"form-control\">
+                        </div>
+                        <button type=\"submit\" class=\"btn btn-success\">Sign in</button>
+            </form>";
+        }
+    }
+}
+

@@ -1,4 +1,6 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Videos extends CI_Controller {
 
     public function __construct()
@@ -70,6 +72,7 @@ class Videos extends CI_Controller {
         else
         {
             $this->Video_model->set_videos();
+            //TODO: Comprobar que no exista ya el video. ( campos )
             $this->load->view('videos/sucess');
         }
     }
