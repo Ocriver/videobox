@@ -66,7 +66,7 @@ class User extends CI_Controller {
 
     public function req_logged_in()
     {
-        if (!$this->ion_auth->logged_in())
+        if (!$this->login_model->logged_in())
         {
             redirect('user/login');
         }
