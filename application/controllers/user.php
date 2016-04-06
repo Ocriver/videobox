@@ -23,6 +23,7 @@ class User extends CI_Controller {
 
     public function login()
     {
+
         $this->load->helper('form');
         $this->load->library('form_validation');
 
@@ -30,6 +31,9 @@ class User extends CI_Controller {
 
         $this->form_validation->set_rules('inputEmail', 'Email', 'required');
         $this->form_validation->set_rules('inputPassword', 'Password', 'required');
+
+
+        //TODO: mejorar la validacion en el sistema mostrando errores si se introduce mal la contraseña
 
         if ($this->form_validation->run() === FALSE)
         {
@@ -60,7 +64,20 @@ class User extends CI_Controller {
 
     public function profile($user_id)
     {
-        return $this->login_model->profile($user_id);
+        $profile=$this->login_model->profile($user_id);
 
+        $data=array(
+            'title' => "Perfil"
+        );
+
+        //Load View
+        $this->parser->parse('templates/header', $data);
+        $this->parser->parse('user/profile',$profile);
+        $this->load->view('templates/footer');
+    }
+
+    public function logged_in()
+    {
+        return $this->login_model->logged_in();
     }
 }
