@@ -63,12 +63,4 @@ class User extends CI_Controller {
         return $this->login_model->profile($user_id);
 
     }
-
-    public function req_logged_in()
-    {
-        if (!$this->login_model->logged_in())
-        {
-            redirect('user/login');
-        }
-    }
 }

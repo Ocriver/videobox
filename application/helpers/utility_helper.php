@@ -70,3 +70,16 @@ if ( !function_exists('user_login_nav'))
     }
 }
 
+
+if (!function_exists('req_logged_in'))
+{
+    function req_logged_in()
+    {
+        $CI =& get_instance();
+        
+        if (!$CI->login_model->logged_in())
+        {
+            redirect('user/login');
+        }
+    }
+}

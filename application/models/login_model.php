@@ -10,7 +10,7 @@ class login_model extends CI_Model {
 
     public function __construct()
     {
-        var_dump(sys_get_temp_dir());
+        
         $this->load->add_package_path(APPPATH.'third_party/ion-auth');
         $this->load->library('ion_auth');
     }
