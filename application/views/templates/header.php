@@ -3,6 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -30,42 +31,13 @@
     <script src="<?php echo asset_url('js/vendor/lodash.min.js') ?>"></script>
     <script src="<?php echo asset_url('js/vendor/bootstrap.min.js') ?>"></script>
     <script src="<?php echo asset_url('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') ?>"></script>
-    
+
 </head>
     <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="<?php echo site_url('')?>">Video Box</a>
-            </div>
 
-            <div id="navbar" class="navbar-collapse collapse">
+    <?php $this->load->view('templates/nav-bar');?>
 
-                <ul class="nav navbar-nav">
-                    <?php echo nav_item('Home','home')?>
-                    <?php echo nav_item('Upload','videos/upload')?>
-                    <?php echo nav_item('Recent Videos','videos')?>
-                    <?php echo nav_item('About','about')?>
-                </ul>
-
-                <form class="navbar-form navbar-right" role="form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-success">Sign in</button>
-                </form>
-            </div><!--/.navbar-collapse -->
-        </div>
-    </nav>
+    <div class='container'>

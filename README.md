@@ -23,19 +23,33 @@ Video box se trata de una aplicación web simple en la que se pueden enviar vide
 ###Configuración
 * **config/config.php** cambiar 'base_url' a la url del servidor
 * **config/database.php** añadir información de la base de datos
-    * **DDL base de datos** :
+    * **DDL base de datos Videos** :
     ```
-CREATE TABLE videos
-(
-    id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    title VARCHAR(128) NOT NULL,
-    videoid VARCHAR(128) NOT NULL,
-    text TEXT NOT NULL,
-    name VARCHAR(128) NOT NULL,
-    `mpeg-dash` TINYINT(1) DEFAULT '0' NOT NULL
-);
-CREATE INDEX videoid ON videos (videoid);
+    CREATE TABLE IF NOT EXISTS videos
+    (
+        id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+        title VARCHAR(128) NOT NULL,
+        videoid VARCHAR(128) NOT NULL,
+        text TEXT NOT NULL,
+        name VARCHAR(128) NOT NULL,
+        'mpeg-dash' TINYINT(1) DEFAULT '0' NOT NULL
+    );
+    CREATE INDEX videoid ON videos (videoid);
     ```
+    * **Mantener sesion** :
+
+    ```
+    CREATE TABLE IF NOT EXISTS `ci_sessions` (
+            `id` varchar(40) NOT NULL,
+            `ip_address` varchar(45) NOT NULL,
+            `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
+            `data` blob NOT NULL,
+            KEY `ci_sessions_timestamp` (`timestamp`)
+    );
+    ```
+    * **Autentificación de usuarios** :
+    Ejecutar el archivo en la BDD:
+     `/application/third_party/ion-auth/sql/ion_auth.mssql.sql`
 
 ##Demo
 
