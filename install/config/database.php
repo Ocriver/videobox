@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
     'dsn'	=> '',
-    'hostname' => '127.0.0.1:8889',
-    'username' => 'videobox_user',
-    'password' => 'videobox_pass',
-    'database' => 'videobox',
+    'hostname' => '%HOSTNAME%',
+    'username' => '%USERNAME%',
+    'password' => '%PASSWORD%',
+    'database' => '%DATABASE',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => FALSE,
