@@ -69,8 +69,7 @@ if ( !function_exists('user_login_nav'))
                     <li><p class='navbar-text'>Signed in as ".$uri_profile."</p></li>
                     <li><button type='button' class='btn btn-success navbar-btn'>
                     <a  href='$uri_logout' class='navbar-link'>Logout</a></button></li></ul>";
-
-            //TODO: Añadir logout
+            
         }
         else {
             $uri=site_url('user/login');
