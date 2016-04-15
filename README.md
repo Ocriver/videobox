@@ -49,7 +49,7 @@ Video box se trata de una aplicación web simple en la que se pueden enviar vide
     ```
     * **Autentificación de usuarios** :
     Ejecutar el archivo en la BDD:
-     `/application/third_party/ion-auth/sql/ion_auth.mssql.sql`
+     `/application/third_party/ion-auth/sql/ion_auth.sql`
 
 ##Demo
 
