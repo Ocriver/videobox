@@ -33,13 +33,14 @@ class Video_model extends CI_Model {
         $this->load->helper('url');
 
         $videoid = url_title($this->input->post('name'), 'dash', TRUE);
-
+        $mpeg_dash = ($this->input->post('mpeg-dash'))?1:0;
+        
         $data = array(
             'title' => $this->input->post('title'),
             'videoid' => $videoid,
             'text' => $this->input->post('text'),
             'name' => $this->input->post('name'),
-            'mpeg-dash' =>$this->input->post('mpeg-dash')
+            'mpeg-dash' => $mpeg_dash
         );
 
         return $this->db->insert('videos', $data);
