@@ -22,34 +22,16 @@ Video box se trata de una aplicación web simple en la que se pueden enviar vide
 
 ###Configuración
 * **config/config.php** cambiar 'base_url' a la url del servidor
-* **config/database.php** añadir información de la base de datos
-    * **DDL base de datos Videos** :
-    ```
-    CREATE TABLE IF NOT EXISTS videos
-    (
-        id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-        title VARCHAR(128) NOT NULL,
-        videoid VARCHAR(128) NOT NULL,
-        text TEXT NOT NULL,
-        name VARCHAR(128) NOT NULL,
-        'mpeg-dash' TINYINT(1) DEFAULT '0' NOT NULL
-    );
-    CREATE INDEX videoid ON videos (videoid);
-    ```
-    * **Mantener sesion** :
-
-    ```
-    CREATE TABLE IF NOT EXISTS `ci_sessions` (
-            `id` varchar(40) NOT NULL,
-            `ip_address` varchar(45) NOT NULL,
-            `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
-            `data` blob NOT NULL,
-            KEY `ci_sessions_timestamp` (`timestamp`)
-    );
-    ```
-    * **Autentificación de usuarios** :
-    Ejecutar el archivo en la BDD:
-     `/application/third_party/ion-auth/sql/ion_auth.sql`
+* **config/database.php** añadir información de la base de datos:
+Para facilitar la tarea se ha añadido un script de instalación:
+**/install/index.php**  
+Se deberan rellenar los datos de la base de datos de la forma:
+    * **Hostname**: dirección del servidor:puerto
+    * **Username**: nombre de usuario con acceso a la base de datos
+    * **Password**: contraseña relacionada con el usuario
+    * **Database name**: nombre de la base de datos
+ * Asegurarse que config/database.php se pueda escribir en ella ( chmod 777 ).
+ * Al terminar la instalación es recomendable eliminar la carpeta /install
 
 ##Demo
 

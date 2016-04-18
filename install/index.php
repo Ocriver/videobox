@@ -99,7 +99,7 @@ if($_POST) {
 		  <form id="install_form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <fieldset>
           <legend>Database settings</legend>
-          <label for="hostname">Hostname</label><input type="text" id="hostname" value="localhost" class="input_text" name="hostname" />
+          <label for="hostname">Hostname</label><input type="text" id="hostname" value="localhost:3306" class="input_text" name="hostname" />
           <label for="username">Username</label><input type="text" id="username" class="input_text" name="username" />
           <label for="password">Password</label><input type="password" id="password" class="input_text" name="password" />
           <label for="database">Database Name</label><input type="text" id="database" class="input_text" name="database" />
