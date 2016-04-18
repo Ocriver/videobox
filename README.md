@@ -35,8 +35,8 @@ Se deberan rellenar los datos de la base de datos de la forma:
 
 ##Demo
 
-* **Develoment** <http://videobox.azurewebsites.net/index.php>
-* **Release** <>
+* **Develoment** <http://videobox.azurewebsites.net/index.php> (Site Offline)
+* **Release** <http://trabajomultimedia.westeurope.cloudapp.azure.com/>
 
 ##Tecnologías utilizadas
 * **[CodeIgniter](https://codeigniter.com)** v3.0.6 - Framework PHP
