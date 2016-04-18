@@ -16,11 +16,6 @@ class User extends CI_Controller {
         $this->load->library('parser');
     }
 
-    public function index()
-    {
-        //TODO: Mostrar el perfil de usuario
-    }
-
     public function login()
     {
 

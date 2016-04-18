@@ -51,7 +51,7 @@ class Videos extends CI_Controller {
 
     public function upload()
     {
-        //TODO: Completar el formulario de subida
+        //TODO (Diego): Completar el formulario de subida
 
         req_logged_in();
 
@@ -74,7 +74,7 @@ class Videos extends CI_Controller {
         else
         {
             $this->Video_model->set_videos();
-            //TODO: Comprobar que no exista ya el video. ( campos )
+            //TODO (Diego): Comprobar que no exista ya el video. ( campos )
             $this->load->view('videos/sucess');
         }
     }

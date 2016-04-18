@@ -41,7 +41,6 @@ class login_model extends CI_Model {
 
     public function profile($user_id='')
     {
-        //TODO: Completar profile
         return $this->ion_auth->user()->row();
     }
 

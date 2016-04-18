@@ -24,7 +24,7 @@ Video box se trata de una aplicación web simple en la que se pueden enviar vide
 * **config/config.php** cambiar 'base_url' a la url del servidor
 * **config/database.php** añadir información de la base de datos:
 Para facilitar la tarea se ha añadido un script de instalación:
-**/install/index.php**  
+**/install/index.php**
 Se deberan rellenar los datos de la base de datos de la forma:
     * **Hostname**: dirección del servidor:puerto
     * **Username**: nombre de usuario con acceso a la base de datos
