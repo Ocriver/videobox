@@ -2,16 +2,16 @@
 -- Paste your SQL dump into this file
 --
 
-CREATE TABLE IF NOT EXISTS videos
-(
-    id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    title VARCHAR(128) NOT NULL,
-    videoid VARCHAR(128) NOT NULL,
-    text TEXT NOT NULL,
-    name VARCHAR(128) NOT NULL,
-    'mpeg-dash' TINYINT(1) DEFAULT '0' NOT NULL
+CREATE TABLE `videos` (
+  `id` int(11) NOT NULL,
+  `title` varchar(128) NOT NULL,
+  `videoid` varchar(128) NOT NULL,
+  `text` text NOT NULL,
+  `name` varchar(128) NOT NULL,
+  `mpeg-dash` tinyint(1) NOT NULL DEFAULT '0'
 );
-CREATE INDEX videoid ON videos (videoid);
+CREATE INDEX `videoid` ON videos (videoid);
+
 
 CREATE TABLE IF NOT EXISTS `ci_sessions` (
         `id` varchar(40) NOT NULL,
