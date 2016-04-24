@@ -23,6 +23,14 @@ class Videos extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
+          function new_video($error = '')
+   {
+      $data['error'] = $error;
+      $this->load->view('header');
+      $this->load->view('video/new_video', $data);
+      $this->load->view('footer');
+   }
+
     public function view($videoid = NULL)
     {
         //$data['videos_item'] = $this->Video_model->get_videos($videoid);
@@ -51,7 +59,38 @@ class Videos extends CI_Controller {
 
     public function upload()
     {
-        //TODO (Diego): Completar el formulario de subida
+        if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
+
+class Archivo extends CI_Controller {
+
+    function cargar_video() {
+
+        $mi_video = 'mi_video';
+        $config['upload_path'] = "./videos/";
+        $config['allowed_types'] = "avi";
+        $config['max_size'] = "50000";
+
+        $this->load->library('upload', $config);
+        
+        if ($this->form_validation->run() == FALSE)
+        {
+   //Acción a tomar si existe un error el en la validación
+        }
+        else
+        {
+   //Acción a tomas si no existe ningun error
+        }
+        
+        if (!$this->upload->do_upload($mi_video)) {
+            //*** ocurrio un error en la subida del video
+            $data['uploadError'] = $this->upload->display_errors();
+            echo $this->upload->display_errors();
+            return;
+        }
+
+        $data['uploadSuccess'] = $this->upload->data();
+    }
 
         req_logged_in();
 
@@ -60,9 +99,9 @@ class Videos extends CI_Controller {
 
         $data['title'] = 'Upload a video item';
 
-        $this->form_validation->set_rules('title', 'Titulo', 'required');
-        $this->form_validation->set_rules('text', 'Descripcion', 'required');
-        $this->form_validation->set_rules('name', 'Nombre Archivo', 'required');
+        $this->form_validation->set_rules('title', 'Titulo', 'required|is_unique');
+        $this->form_validation->set_rules('text', 'Descripcion', 'required|is_unique');
+        $this->form_validation->set_rules('name', 'Nombre Archivo', 'required|is_unique');
 
         if ($this->form_validation->run() === FALSE)
         {
@@ -78,4 +117,5 @@ class Videos extends CI_Controller {
             $this->load->view('videos/sucess');
         }
     }
+}
 }
